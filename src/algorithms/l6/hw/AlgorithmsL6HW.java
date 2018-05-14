@@ -6,7 +6,7 @@ package algorithms.l6.hw;
 
 /**
  *
- * @author kentyku
+ * @author Yuri Tveritin
  */
 public class AlgorithmsL6HW {
 
@@ -14,7 +14,20 @@ public class AlgorithmsL6HW {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("="+generateHashcode("привет"));
+    }
+    /**
+     * Метод нахождения хешкода от введенной строки
+     * @param str
+     * @return 
+     */
+    static int generateHashcode(String str){
+        int hashcode=0;
+        for (int i = 0; i < str.length(); i++) {
+            System.out.println(str.codePointAt(i));
+            hashcode=hashcode+str.codePointAt(i);
+        }
+        return hashcode;
     }
     
 }
